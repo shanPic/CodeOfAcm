@@ -1,0 +1,8 @@
+﻿n = int(123)
+print('n =',n)
+f = float(456.789)
+print('f =',f)
+print("s1 = 'Hello,world'")
+print("s2 = 'Hello,\\\'Adma\''")
+print("s3 = r\'Hello,\"Bart\"")
+print("s4 = r'''Hello,'",'\n'"Lisa!'''")

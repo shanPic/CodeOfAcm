@@ -1,0 +1,6 @@
+{
+	"workbench.colorCustomizations": {  
+		//选中区域的颜色
+		"editor.selectionBackground": "#576E75",
+	}  
+}

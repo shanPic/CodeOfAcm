@@ -1,0 +1,27 @@
+#include<iostream>
+#include<cstdio>
+#include<string>
+using namespace std;
+const int MAX = 10100;
+char buf[MAX];
+int main()
+{
+	int x, d,r;
+	scanf("%s", buf);
+		x = 0;
+		d = 0;
+		int i = 0;
+		while (buf[i] >= 'A'&&buf[i] <= 'Z'){
+			i++;
+		}
+		for (; i < strlen(buf); i++){
+			if (buf[i] >= 'a'&&buf[i] <= 'z')
+				x++;
+			else
+				d++;
+		}
+		r = x > d ? d : x;
+		printf("%d", r);
+	//system("pause");
+	return 0;
+}

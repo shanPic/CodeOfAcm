@@ -1,0 +1,26 @@
+int cur1[4],cur2[4],cur3[4],cur4[4],cur5[4],cur6[4],tmp[4];
+cur1[1]=7; cur1[2]=8; cur1[3]=4; 
+cur2[1]=11; cur2[2]=12; cur2[3]=13; 
+cur3[1]=22; cur3[2]=20; cur3[3]=25; 
+cur4[1]=61; cur4[2]=60; cur4[3]=56; 
+cur5[1]=67; cur5[2]=66; cur5[3]=65; 
+cur6[1]=40; cur6[2]=44; cur6[3]=43; 
+for(int i=1;i<=3;i++) tmp[i]=cur6[i];
+for(int i=1;i<=3;i++){
+	swap(d[cur1[i]],tmp[i]);
+}
+for(int i=1;i<=3;i++){
+	swap(d[cur2[i]],tmp[i]);
+}
+for(int i=1;i<=3;i++){
+	swap(d[cur3[i]],tmp[i]);
+}
+for(int i=1;i<=3;i++){
+	swap(d[cur4[i]],tmp[i]);
+}
+for(int i=1;i<=3;i++){
+	swap(d[cur5[i]],tmp[i]);
+}
+for(int i=1;i<=3;i++){
+	swap(d[cur6[i]],tmp[i]);
+}

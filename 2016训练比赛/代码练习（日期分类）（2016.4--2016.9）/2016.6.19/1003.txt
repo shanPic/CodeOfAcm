@@ -1,0 +1,43 @@
+#include<iostream>
+#include<stdio.h>
+using namespace std;
+const int MAX=1010;
+int c[MAX];
+int find(int x)
+{
+    while(c[x]!=x){
+        x=c[x];
+    }
+    return x;
+}
+void mergc(int x,int y)
+{
+    x=find(x);
+    y=find(y);
+    if(x!=y){
+        c[x]=y;
+    }
+}
+int main()
+{
+    //freopen("in.txt","r",stdin);
+    //freopen("out.txt","w",stdout);
+    int N,M,x,y,res;
+    while(cin>>N&&N!=0){
+        cin>>M;
+        for(int i=1;i<=N;i++){
+            c[i]=i;
+        }
+        for(int i=1;i<=M;i++){
+            cin>>x>>y;
+            mergc(x,y);
+        }
+        res=-1;
+        for(int i=1;i<=N;i++){
+            if(c[i]==i)
+                res++;
+        }
+        cout<<res<<endl;
+    }
+}
+

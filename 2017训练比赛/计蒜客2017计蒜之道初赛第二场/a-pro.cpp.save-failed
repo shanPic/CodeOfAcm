@@ -1,0 +1,36 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int num[5];
+    cin>>num[1]>>num[2]>>num[3]>>num[4];
+    int sum=0;
+    for(int i=1;i<=4;i++){
+        sum+=num[i];
+    }
+    int k,d,target=0;
+    cin>>k>>d;
+    for(int i=4;i>k;i--){
+        target+=num[i];
+    }
+    target+=d;
+    int now,p;
+    int res=0;
+    for(int x=1;x<=6;x++){
+        for(int y=1;y<=6;y++){
+            p=0;
+            now=(x+y)%4;
+            for(int i=4;i>now;i--){
+                p+=num[i];
+            }
+            p+=(min(x,y)+1);
+            p=target-p;
+            if(p<0) p+=sum;
+            if(p<=24&&p%8==0){
+                res++;
+                if(x==y) res++;
+            }
+        }
+    }
+    cout<<res/2<<endl;
+}

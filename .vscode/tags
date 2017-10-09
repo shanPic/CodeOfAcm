@@ -1,0 +1,27 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+PythonApplication1.py	../´úÂëÁ·Ï°£¨ÈÕÆÚ·ÖÀà£©\2016.7.12--python\PythonApplication1\PythonApplication1\PythonApplication1.py	1;"	kind:file	line:1
+PythonApplication1.py	../´úÂëÁ·Ï°£¨ÈÕÆÚ·ÖÀà£©\2016.7.20--pythonLearn\PythonApplication1\PythonApplication1\PythonApplication1.py	1;"	kind:file	line:1
+a1	../´úÂëÁ·Ï°£¨ÈÕÆÚ·ÖÀà£©\2016.7.20--pythonLearn\PythonApplication1\PythonApplication1\PythonApplication1.py	/^a1=(1,2,3)$/;"	kind:variable	line:1
+a2	../´úÂëÁ·Ï°£¨ÈÕÆÚ·ÖÀà£©\2016.7.20--pythonLearn\PythonApplication1\PythonApplication1\PythonApplication1.py	/^a2=(1,[2,3])$/;"	kind:variable	line:2
+birth	../Python\PythonÑ§Ï°\Á·Ï°\pratice.py	/^birth=('1997','7','2') #å¦ä¸€ç§æœ‰åºåˆ—è¡¨å«å…ƒç»„ï¼štupleã€‚tupleå’Œlistéå¸¸ç±»ä¼¼ï¼Œä½†æ˜¯tupleä¸€æ—¦åˆå§‹åŒ–å°±ä¸èƒ½ä¿®æ”¹$/;"	kind:variable	line:7
+d	../Python\PythonÑ§Ï°\Á·Ï°\pratice.py	/^d = {'Michael': 95, 'Bob': 75, 'Tracy': 85} #å­—å…¸$/;"	kind:variable	line:8
+d1	../´úÂëÁ·Ï°£¨ÈÕÆÚ·ÖÀà£©\2016.7.20--pythonLearn\PythonApplication1\PythonApplication1\PythonApplication1.py	/^d1={a1:'value'}$/;"	kind:variable	line:4
+d2	../´úÂëÁ·Ï°£¨ÈÕÆÚ·ÖÀà£©\2016.7.20--pythonLearn\PythonApplication1\PythonApplication1\PythonApplication1.py	/^d2={a2:'value'}/;"	kind:variable	line:6
+f	../´úÂëÁ·Ï°£¨ÈÕÆÚ·ÖÀà£©\2016.7.12--python\PythonApplication1\PythonApplication1\PythonApplication1.py	/^f = float(456.789)$/;"	kind:variable	line:3
+getjpg.py	../Python\ÅÀ³æÑ§Ï°\pythonÊµÏÖ¼òµ¥ÅÀ³æ¹¦ÄÜ\getjpg.py	1;"	kind:file	line:1
+name	../Python\PythonÑ§Ï°\Á·Ï°\pratice.py	/^name=['liu','zhan','shan'] #listæ˜¯ä¸€ç§æœ‰åºçš„é›†åˆï¼Œå¯ä»¥éšæ—¶æ·»åŠ å’Œåˆ é™¤å…¶ä¸­çš„å…ƒç´ ã€‚$/;"	kind:variable	line:2
+pratice.py	../Python\PythonÑ§Ï°\Á·Ï°\pratice.py	1;"	kind:file	line:1
+response	../Python\ÅÀ³æÑ§Ï°\VSĞ´ÅÀ³æ\ÅÀ³æ\ÅÀ³æ\ÅÀ³æ.py	/^response = urllib2.urlopen("http:\/\/www.baidu.com")$/;"	kind:variable	line:3
+response	../Python\ÅÀ³æÑ§Ï°\pythonÊµÏÖ¼òµ¥ÅÀ³æ¹¦ÄÜ\getjpg.py	/^response = urllib.urlopen("http:\/\/www.baidu.com")$/;"	kind:variable	line:3
+s	../Python\PythonÑ§Ï°\Á·Ï°\pratice.py	/^s = set([1, 2, 3])$/;"	kind:variable	line:9
+test.py	../test.py	1;"	kind:file	line:1
+test.py	../´úÂëÁ·Ï°£¨ÈÕÆÚ·ÖÀà£©\2016.7.12--python\test.py	1;"	kind:file	line:1
+test.py	../´úÂëÁ·Ï°£¨ÈÕÆÚ·ÖÀà£©\2016.7.15---python\test\test\test.py	1;"	kind:file	line:1
+urllib	../Python\ÅÀ³æÑ§Ï°\VSĞ´ÅÀ³æ\ÅÀ³æ\ÅÀ³æ\ÅÀ³æ.py	/^import urllib$/;"	kind:namespace	line:1
+urllib	../Python\ÅÀ³æÑ§Ï°\pythonÊµÏÖ¼òµ¥ÅÀ³æ¹¦ÄÜ\getjpg.py	/^import urllib$/;"	kind:namespace	line:1
+ÅÀ³æ.py	../Python\ÅÀ³æÑ§Ï°\VSĞ´ÅÀ³æ\ÅÀ³æ\ÅÀ³æ\ÅÀ³æ.py	1;"	kind:file	line:1

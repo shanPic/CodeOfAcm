@@ -1,0 +1,20 @@
+﻿生成启动时间为 2016/9/14 21:24:57。
+     1>项目“D:\代码与算法\代码练习（日期分类）\2016.9.02--temC++\temC++\temC++\temC++.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt "源.cpp"
+         源.cpp
+     1>d:\代码与算法\代码练习（日期分类）\2016.9.02--temc++\temc++\temc++\源.cpp(5): warning C4244: “初始化”: 从“double”转换到“const int”，可能丢失数据
+     1>d:\代码与算法\代码练习（日期分类）\2016.9.02--temc++\temc++\temc++\源.cpp(49): warning C4996: 'freopen': This function or variable may be unsafe. Consider using freopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(226) : 参见“freopen”的声明
+     1>d:\代码与算法\代码练习（日期分类）\2016.9.02--temc++\temc++\temc++\源.cpp(57): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(283) : 参见“scanf”的声明
+     1>d:\代码与算法\代码练习（日期分类）\2016.9.02--temc++\temc++\temc++\源.cpp(68): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(283) : 参见“scanf”的声明
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\代码与算法\代码练习（日期分类）\2016.9.02--temC++\temC++\Debug\temC++.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\代码与算法\代码练习（日期分类）\2016.9.02--temC++\temC++\Debug\temC++.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\代码与算法\代码练习（日期分类）\2016.9.02--temC++\temC++\Debug\temC++.lib" /MACHINE:X86 "Debug\源.obj"
+         temC++.vcxproj -> D:\代码与算法\代码练习（日期分类）\2016.9.02--temC++\temC++\Debug\temC++.exe
+     1>已完成生成项目“D:\代码与算法\代码练习（日期分类）\2016.9.02--temC++\temC++\temC++\temC++.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:00.82

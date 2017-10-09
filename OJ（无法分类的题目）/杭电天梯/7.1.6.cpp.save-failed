@@ -1,0 +1,135 @@
+#include<bits/stdc++.h>
+using namespace std;
+const int MAXN=55000;
+const int INF=0x3f3f3f3f;
+const int eps=1e-8;
+struct Point
+{
+    int x,y;
+    Point(){}
+    Point(int _x,int _y)
+    {
+        x = _x;y = _y;
+    }
+    Point operator -(const Point &b)const
+    {
+        return Point(x - b.x,y - b.y);
+    }
+
+    double operator ^(const Point &b)const //叉积
+    {
+        return x*b.y - y*b.x;
+    }
+
+    double operator *(const Point &b)const //点积
+    {
+        return x*b.x + y*b.y;
+    }
+    bool operator ==(const Point &b)const
+    {
+        return (x==b.x)&&(y==b.y);
+    }
+    void input(){//点的输入
+        scanf("%d%d",&x,&y);
+    }
+};
+struct Line {
+    Point s,e;
+    Line(){}
+    Line(Point _s,Point _e) {
+        s = _s; e = _e;
+    }
+};
+
+double dist(Point& a,Point& b)//*两点间距离
+{
+    return sqrt((a-b)*(a-b));
+}
+Point zero;
+bool cmp(Point& a,Point &b)
+{
+//    if((a.y-zero.y)==0&&(b.y-zero.y)>0)
+//        return 1;
+//    if((a.y-zero.y)>0&&(b.y-zero.y)<=0)
+//        return 0;
+    if(a==zero) return 1;
+    if(b==zero) return 0;
+    double tmp=(a-zero)^(b-zero);
+    if(tmp>0){
+        return 1;
+    }
+    else if(tmp==0){
+        return a.x<b.x;
+    }
+    return 0;
+}
+int n;
+Point a[MAXN];
+int l[MAXN];
+int cou=0;
+void Gram()
+{
+    sort(a,a+n,cmp);
+    l[cou++]=0;
+    l[cou++]=1;
+    for(int i=2;i<n;i++){
+        while(((a[l[cou-1]]-a[l[cou-3]])^(a[l[cou-2]]-a[l[cou-3]]))>eps){
+            cout<<111111111111<<endl;
+            cou--;
+        }
+        l[cou++]=i;
+    }
+}
+int main()
+{
+    freopen("data.in","r",stdin);
+    while(~scanf("%d",&n)){
+        zero.x=zero.y=INF;
+        for(int i=0;i<n;i++){
+            a[i].input();
+            if(a[i].y<zero.y){
+                zero.x=a[i].x;
+                zero.y=a[i].y;
+            }
+            else if(a[i].y==zero.y){
+                if(a[i].x<zero.x){
+                    zero.x=a[i].x;
+                    zero.y=a[i].y;
+                }
+            }
+        }
+        cout<<zero.x<<"\t"<<zero.y<<endl;
+        cou=0;
+        Gram();
+        for(int i=0;i<cou;i++){
+            cout<<l[i]<<"\t"<<a[l[i]].x<<"\t"<<a[l[i]].y<<endl;
+        }
+        cout<<(a[2]^a[3])<<endl;
+        cout<<cou<<endl;
+        double one=-1,second=-1;
+        Point x,y,z;
+        for(int i=0;i<cou;i++){
+            for(int j=0;j<cou;j++){
+                double tmp=dist(a[l[i]],a[l[j]]);
+                if(tmp>one){
+                    one=tmp;
+                    x=a[l[i]];
+                    y=a[l[j]];
+                }
+            }
+        }
+        for(int i=0;i<cou;i++){
+            double tmp1=dist(a[l[i]],x);
+            double tmp2=dist(a[l[i]],y);
+            if(tmp1>second){
+                z=a[l[i]];
+                second=tmp1;
+            }
+            if(tmp2>second){
+                z=a[l[i]];
+                second=tmp2;
+            }
+        }
+        printf("%.2lf\n",fabs((x-y)^(x-z))/2);
+    }
+}

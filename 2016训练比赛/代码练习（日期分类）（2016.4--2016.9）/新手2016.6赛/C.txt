@@ -1,0 +1,30 @@
+#include<iostream>
+#include<cstdio>
+#include<cmath>
+using namespace std;
+int gcd(int a, int b)
+{
+	return b == 0 ? a : gcd(b, a%b);
+}
+int main()
+{
+	int n, casen=1, x, y, p, res;
+	cin >> n;
+	for (int i = 0; i < n; i++){
+		res = 1;
+		cin >> x >> y;
+		p = gcd(x, y);
+		x = x / p;
+		y = y / p;
+		if (x < y)
+			swap(x, y);
+		while (x % (1 + y) == 0){
+			res++;
+			x = x /( 1 + y);
+			if (x < y)
+				swap(x, y);
+		}
+		printf("Case #%d: %d\n", casen++, res);
+	}
+	//system("pause");
+}

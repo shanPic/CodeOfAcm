@@ -1,0 +1,43 @@
+#include <iostream>
+#include <cstring>
+#include <stdio.h>
+#include<algorithm>
+#include<cmath>
+using namespace std;
+struct s{
+	double b;
+	double e;
+}xianduan[10000];
+bool cmp(s x, s y)
+{
+	if (x.e < y.e)
+		return 1;
+	else return 0;
+}
+int main()
+{
+	double x, y;
+	double L, D;
+	int n,tem,res;
+	n = 0;
+	while (scanf("%lf%lf%d", L, D, n)){
+		for (int i = 0; i < n; i++){
+			scanf("%lf%lf", x, y);
+			tem = sqrt(D*D - y*y);
+			xianduan[i].b = x - tem;
+			xianduan[i].e = x + tem;
+		}
+		sort(xianduan, xianduan + n, cmp);
+		res = 0;
+		double flag = xianduan[0].e;
+		for (int i = 1; i < n; i++){
+			if (xianduan[i].b <= xianduan[i - 1].e){
+				flag = xianduan[i].e;
+				res++;
+			}
+			else flag = xianduan[i].e;
+		}
+		printf("%d\n", res);
+
+	}
+}

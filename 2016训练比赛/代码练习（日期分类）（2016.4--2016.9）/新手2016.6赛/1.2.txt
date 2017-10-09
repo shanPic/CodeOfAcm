@@ -1,0 +1,35 @@
+#include <iostream>
+#include <string>
+#include <stdio.h>
+using namespace std;
+const int MAX=100100;
+int n;
+char buf[MAX];
+int dp[MAX][2];
+bool min(int a, int b)
+{
+	return a > b ? b : a;
+}
+
+int main()
+{
+	scanf("%s", buf);
+		dp[0][0] = dp[0][1] = 0;
+		if (buf[0]>='A'&&buf[0]<='Z') dp[0][1] = 1;
+		else dp[0][0] = 1;
+		for (int i = 1; i < strlen(buf); i++)
+		{
+			if (buf[0] >= 'A'&&buf[0] <= 'Z')
+			{
+				dp[i][1] = min(dp[i - 1][0], dp[i - 1][1]) + 1;
+				dp[i][0] = dp[i - 1][0];
+			}
+			else
+			{
+				dp[i][1] = min(dp[i - 1][0], dp[i - 1][1]);
+				dp[i][0] = dp[i - 1][0] + 1;
+			}
+		}
+		printf("%d", min(dp[n - 1][0], dp[n - 1][1]));
+
+	}

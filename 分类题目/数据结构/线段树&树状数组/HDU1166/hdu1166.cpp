@@ -1,0 +1,5 @@
+//
+//Hdu1166--µÐ±ø²¼Õó
+//
+#include<bits/stdc++.h>
+using namespace std;
