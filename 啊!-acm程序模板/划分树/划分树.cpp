@@ -31,6 +31,7 @@ void build(int l, int r, int dep)
 			tree[dep + 1][rpos++] = tree[dep][i];
 
 		toleft[dep][i] = toleft[dep][l - 1] + lpos - l;
+		
 	}
 	build(l, mid, dep + 1);
 	build(mid + 1, r, dep + 1);
@@ -47,7 +48,7 @@ int query(int L, int R, int l, int r, int dep, int k)
 
 	if (cnt >= k) //要查询的[l,r]区间的第k大数被分到了左子树
 	{
-		int newl = L + toleft[dep][l - 1] - toleft[dep][L - 1];	//
+		int newl = L + toleft[dep][l - 1] - toleft[dep][L - 1];	
 		int newr = newl + cnt - 1;
 		return query(L, mid, newl, newr, dep + 1, k);
 	}
