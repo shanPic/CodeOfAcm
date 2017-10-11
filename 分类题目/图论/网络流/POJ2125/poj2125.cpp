@@ -22,11 +22,12 @@ struct Edge
 	Edge(int from,int to,int nxt,int cap,int flow):from(from),to(to),nxt(nxt),cap(cap),flow(flow){};
 	Edge(){};
 };
-struct 
+struct
 {
 	int cnt=0;
 	int head[maxn];
 	Edge e[maxm];
+	int cur[maxn];
 	int dis[maxn],vis[maxn];//dis为在分层图中的层数
 	void init()
 	{
@@ -36,14 +37,15 @@ struct
 	void addedge(int from,int to,int cap,int flow=0)
 	{
 		e[cnt].from=from,e[cnt].to=to,e[cnt].cap=cap,e[cnt].flow=flow;
-		e[cnt].nxt=head[from];	head[from]=cnt;	
+		e[cnt].nxt=head[from];	head[from]=cnt;
 		cnt++;
 		e[cnt].from=to,e[cnt].to=from,e[cnt].cap=flow,e[cnt].flow=0;
-		e[cnt].nxt=head[to];	head[to]=cnt; 
+		e[cnt].nxt=head[to];	head[to]=cnt;
 		cnt++;
 	}
 	int bfs(int s,int t)
 	{
+	    //memset(dis,0,sizeof(dis));
 		memset(vis,0,sizeof(vis));
 		queue<int> q;
 		q.push(s);dis[s]=0;vis[s]=1;
@@ -56,12 +58,12 @@ struct
 					dis[v]=dis[x]+1;
 					vis[v]=1;
 					q.push(v);
-				}	
+				}
 			}
 		}
 		//cout<<vis[t]<<endl;
 		return vis[t];
-		
+
 	}
 	int dfs(int now,int t,int sy) //sy为剩余流量
 	{
@@ -85,6 +87,8 @@ struct
 	{
 		int flow=0;
 		while(bfs(s,t)){
+            //cout<<"bfs"<<endl;
+		    //for(int i=0;i<=cnt;i++) cur[i]=head[i];
 			//cout<<1111<<endl;
 			flow+=dfs(s,t,inf);
 		}
@@ -102,15 +106,16 @@ int main()
 		for(int i=1;i<=n;i++) scanf("%d",&ot[i]);
 		int u,v;
 		MF.init();
-		int s=1,t=2*n+2;
+		int s=0,t=2*n+2;
 		for(int i=0;i<m;i++){
 			scanf("%d%d",&u,&v);
-			MF.addedge(s,u,ot[u]);
-			MF.addedge(u,v+n,inf);
-			MF.addedge(v+n,t,in[v]);
+			MF.addedge(u+n,v,inf);
+		}
+		for(int i=1;i<=n;i++){
+            MF.addedge(i,t,in[i]);
+            MF.addedge(s,i+n,ot[i]);
 		}
 		printf("%d\n",MF.sap(s,t));
 	}
-	
 	return 0;
 }
