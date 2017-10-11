@@ -1,3 +1,13 @@
+/*
+* @FileName: D:\代码与算法\分类题目\数据结构\划分树\POJ2104.cpp
+* @Author: Pic
+* @Date:   2017-10-11 14:43:46
+* @Last Modified time: 2017-10-11 15:07:02
+*/
+#include <iostream>
+#include <algorithm>
+#include <cstdio>
+using namespace std;
 
 /*----------------建树过程----------------------*/
 
@@ -6,7 +16,7 @@
 */
 const int MAXN = 100010;
 int tree[20][MAXN];//表示每层每个位置的值
-int sorted[MAXN];//已经排序好的数，为升序排列
+int sorted[MAXN];//已经排序好的数,
 int toleft[20][MAXN];//toleft[p][i]表示第i层从1到i有多少数分入左边
 void build(int l, int r, int dep)
 {
@@ -59,26 +69,23 @@ int query(int L, int R, int l, int r, int dep, int k)
 		return query(mid + 1, R, newl, newr, dep + 1, k - cnt);
 	}
 }
-
 int main()
 {
-	int n, m;
-	while (scanf("%d%d", &n, &m) == 2)
-	{
-		memset(tree, 0, sizeof(tree));
-		for (int i = 1; i <= n; i++)
-		{
-			scanf("%d", &tree[0][i]);
-			sorted[i] = tree[0][i];
+	//freopen("data.in","r",stdin);
+	int n,m;
+	while(~scanf("%d%d",&n,&m)){
+		for(int i=1;i<=n;i++){
+			scanf("%d",&sorted[i]);
+			tree[0][i]=sorted[i];
 		}
-		sort(sorted + 1, sorted + n + 1);
-		build(1, n, 0);
-		int s, t, k;
-		while (m--)
-		{
-			scanf("%d%d%d", &s, &t, &k);
-			printf("%d\n", query(1, n, s, t, 0, k));
+
+		sort(sorted+1,sorted+n+1);
+		build(1,n,0);
+
+		int l,r,k;
+		for(int i=0;i<m;i++){
+			scanf("%d%d%d",&l,&r,&k);
+			printf("%d\n",query(1,n,l,r,0,k));
 		}
 	}
-	return 0;
 }
